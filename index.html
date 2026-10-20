@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abbhiraj Singh | Nanotechnology & MEMS Researcher</title>
+  <title>Abbhiraj Singh | Nanomechatronics & Semiconductor Packaging Researcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #faf9f6;
@@ -99,7 +99,7 @@
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.75rem;
+      font-size: 2.65rem;
       line-height: 1.2;
       color: #111827;
       margin-bottom: 1rem;
@@ -108,7 +108,7 @@
     .hero p {
       font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 820px;
       margin-bottom: 1.5rem;
     }
 
@@ -185,37 +185,57 @@
       margin-bottom: 0.75rem;
     }
 
-    .publication-item {
+    .item-card {
       background-color: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 1.25rem;
-      margin-bottom: 1rem;
+      padding: 1.35rem;
+      margin-bottom: 1.25rem;
     }
 
-    .publication-item h3 {
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.35rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .item-card h3 {
       font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 0.35rem;
+      color: #111827;
     }
 
-    .publication-item .authors {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .publication-item .venue {
+    .item-date {
       font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .item-sub {
+      font-size: 0.9rem;
       color: var(--accent);
       font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .item-card ul {
+      margin-left: 1.2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .item-card ul li {
+      margin-bottom: 0.35rem;
     }
 
     .award-item {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding: 0.75rem 0;
+      padding: 0.85rem 0;
       border-bottom: 1px dashed var(--border);
     }
 
@@ -238,6 +258,17 @@
       border-radius: 4px;
     }
 
+    .badge-pill {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: #eef2f6;
+      color: var(--accent);
+      font-weight: 600;
+      display: inline-block;
+      margin-left: 0.35rem;
+    }
+
     footer {
       text-align: center;
       padding: 2.5rem 1rem;
@@ -249,6 +280,7 @@
       h1 { font-size: 2.1rem; }
       .hero-cta { flex-direction: column; align-items: flex-start; }
       .nav-links { display: none; }
+      .award-item { flex-direction: column; gap: 0.2rem; }
     }
   </style>
 </head>
@@ -259,6 +291,8 @@
       <a href="#" class="brand">Abbhiraj Singh</a>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Industry</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#awards">Honors</a>
@@ -270,161 +304,303 @@
   <main class="container">
     <!-- Hero Section -->
     <div class="hero">
-      <span class="hero-badge">Nanotechnology &amp; MEMS Engineering</span>
-      <h1>Bridging nanoscale mechanics and micro-device innovation.</h1>
+      <span class="hero-badge">Nanomechatronics &bull; Semiconductor Processes &bull; Precision Packaging</span>
+      <h1>Converging nanoscale semiconductor processes and precision mechatronics.</h1>
       <p>
-        Graduate researcher at Kyoto University of Advanced Science specializing in silicon nanodots, 
-        electron-beam irradiation, thin film deposition, and micro/nanoscale material characterization.
+        Master's researcher at Kyoto University of Advanced Science combining materials-level understanding with systems-level design. Focused on product development, yield ramp, advanced packaging architectures, and nanoscale device characterization.
       </p>
       <div class="hero-cta">
-        <a href="https://www.linkedin.com/in/abbhiraj-singh-616832239/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn Profile</a>
-        <a href="mailto:abbhiraj04@gmail.com" class="btn btn-outline">Get in Touch</a>
+        <a href="https://linkedin.com/in/abbhiraj-singh04" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn Profile</a>
+        <a href="mailto:abbhiraj04@gmail.com" class="btn btn-outline">abbhiraj04@gmail.com</a>
       </div>
     </div>
 
-    <!-- About Section -->
+    <!-- About & Skills -->
     <section id="about">
-      <h2>About &amp; Core Expertise</h2>
-      <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
-        My work centers on the structural and mechanical properties of advanced materials at the sub-micron scale, 
-        combining cleanroom nanofabrication with in-situ electron microscopy techniques and FEA modeling.
-      </p>
+      <h2>Technical Capabilities</h2>
       <div class="grid">
         <div class="card">
-          <h3>Fabrication &amp; Synthesis</h3>
-          <p class="card-meta">Cleanroom &amp; Lithography</p>
+          <h3>Nanofabrication &amp; Direct Bonding</h3>
+          <p class="card-meta">Cleanroom, Lithography &amp; Packaging</p>
           <div class="tags">
             <span class="tag">EB Lithography</span>
             <span class="tag">Photolithography</span>
+            <span class="tag">Thermocompression Bonding</span>
             <span class="tag">FIB Milling</span>
             <span class="tag">Dry/Wet Etching</span>
-            <span class="tag">Reactive Bonding</span>
-            <span class="tag">Stöber Method</span>
+            <span class="tag">Thin Film Deposition</span>
           </div>
         </div>
         <div class="card">
-          <h3>Characterization &amp; Analysis</h3>
-          <p class="card-meta">In-situ &amp; Surface Metrology</p>
+          <h3>Characterization &amp; Metrology</h3>
+          <p class="card-meta">In-situ Observation &amp; Dynamic Testing</p>
           <div class="tags">
-            <span class="tag">SEM &amp; TEM</span>
-            <span class="tag">AFM</span>
-            <span class="tag">Auger Spectroscopy</span>
-            <span class="tag">XRD Analysis</span>
+            <span class="tag">In-situ SEM Tensile Testing</span>
+            <span class="tag">TEM Analysis</span>
+            <span class="tag">Picometer I-V Setup</span>
+            <span class="tag">Dynamic Damping &amp; Resonance</span>
             <span class="tag">Raman Spectroscopy</span>
-            <span class="tag">I-V Characterization</span>
+            <span class="tag">AFM / XRD / Auger</span>
           </div>
         </div>
         <div class="card">
-          <h3>Computation &amp; Design</h3>
-          <p class="card-meta">Simulation &amp; Coding</p>
+          <h3>Systems, Vision &amp; Simulation</h3>
+          <p class="card-meta">Computer Vision &amp; Design</p>
           <div class="tags">
-            <span class="tag">MEMS Design</span>
-            <span class="tag">FEA</span>
-            <span class="tag">Python</span>
-            <span class="tag">MATLAB</span>
-            <span class="tag">C / C++</span>
-            <span class="tag">Simulink</span>
+            <span class="tag">OpenCV / Python</span>
+            <span class="tag">FEA Simulation</span>
+            <span class="tag">MATLAB / Signal Processing</span>
+            <span class="tag">CAD (Fusion 360 / Solidworks)</span>
+            <span class="tag">Automated Optical Inspection</span>
+            <span class="tag">Topology Optimization</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Kyoto University of Advanced Science</h3>
+          <span class="item-date">Sep 2025 – Present</span>
+        </div>
+        <div class="item-sub">Master of Engineering in Nanomechatronics Engineering &bull; Kyoto, Japan</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          <strong>GPA: 3.93 / 4.0</strong> &bull; Super KUAS-E Scholarship Recipient
+        </p>
+      </div>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Kyoto University of Advanced Science</h3>
+          <span class="item-date">Sep 2021 – Aug 2025</span>
+        </div>
+        <div class="item-sub">Bachelor of Engineering in Mechanical and Electrical System Engineering &bull; Kyoto, Japan</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          <strong>GPA: 3.7 / 4.0</strong> &bull; Super KUAS-E Scholarship Recipient
+        </p>
+      </div>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Delhi Public School Ghaziabad Vasundhara</h3>
+          <span class="item-date">Apr 2019 – Mar 2021</span>
+        </div>
+        <div class="item-sub">High School &bull; Ghaziabad, India</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          Graduated with 93.4% &bull; Physics, Chemistry, Mathematics, Geospatial Technology &bull; Academic Scholarship Awardee
+        </p>
+      </div>
+    </section>
+
+    <!-- Industry Experience -->
+    <section id="experience">
+      <h2>Industry Experience</h2>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Yamaha Robotics Co., Ltd.</h3>
+          <span class="item-date">August 2026</span>
+        </div>
+        <div class="item-sub">Summer Intern &bull; Advanced Technology Development Division &bull; Saitama, Japan</div>
+        <ul>
+          <li><strong>Automated optical inspection pipeline for WD3D chip bonding:</strong> Developed automated image processing programs using OpenCV for the WD3D bonding inspection system to enhance semiconductor packaging quality control.</li>
+          <li>Streamlined defect detection and computer vision verification workflows, reducing false misalignment flags and supporting high-precision chip bonder operations.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Research Experience -->
     <section id="research">
-      <h2>Research &amp; Industry Experience</h2>
-      <div class="publication-item">
-        <h3>Student Researcher &bull; Nanomechatronics Laboratory</h3>
-        <p class="venue">Kyoto University of Advanced Science | Sep 2022 – Present</p>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.4rem;">
-          Designed and developed MEMS tensile testing chips for in-situ SEM observation, nanoscale tensile testing, 
-          and I-V characterization. Achieved strength control of silica nano- and micro-structures utilizing silicon nanodots.
-        </p>
+      <h2>Research Projects</h2>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Silicon Nanodot Based Nanomechanical Switch</h3>
+          <span class="item-date">Sep 2025 – Present</span>
+        </div>
+        <div class="item-sub">Nanomechatronics Lab, KUAS (Master's Thesis) &bull; Supervisor: Prof. Dr. Takahiro Namazu</div>
+        <ul>
+          <li>Developed a TEM image analyzer application using OpenCV for automated size and distribution analysis of Si nanodots.</li>
+          <li>Designed a picometer-range electrical characterization setup for nanostructures to detect tunneling current induced between Si nanodots embedded in silica substrates.</li>
+        </ul>
       </div>
 
-      <div class="publication-item">
-        <h3>Research Collaborator &bull; ROHM Co., Ltd.</h3>
-        <p class="venue">Kyoto, Japan | Oct 2022 – Mar 2023</p>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.4rem;">
-          Conducted mechanical property characterization of PZT cantilevers. Designed and implemented a micro-scale 
-          tensile testing setup for PZT material evaluation.
-        </p>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Dynamic Characterization of Glass Substrates for Audio Applications</h3>
+          <span class="item-date">Mar 2026 – Present</span>
+        </div>
+        <div class="item-sub">Nanomechatronics Lab, KUAS (Industry Collaboration) &bull; Supervisor: Prof. Dr. Takahiro Namazu</div>
+        <ul>
+          <li>Designed and executed automated dynamic characterization experiments on specialized glass substrates to evaluate mechanical damping and resonance behavior for acoustic applications.</li>
+          <li>Applied signal processing and adaptive peak fitting algorithms to extract key material properties including quality factors, loss factors, and damping rates.</li>
+        </ul>
+      </div>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Hydrophilic Direct Bonding of SiC and Sapphire Substrates for Harsh Environments</h3>
+          <span class="item-date">Nov 2024 – Aug 2025</span>
+        </div>
+        <div class="item-sub">KUAS &amp; Griffith University Collaboration &bull; Supervisor: Prof. Dr. Takahiro Namazu</div>
+        <ul>
+          <li>Developed a low-temperature (250°C) hydrophilic thermocompression bonding method to integrate single-crystalline 3C-SiC thin films onto sapphire substrates for harsh-environment MEMS and power electronics.</li>
+          <li>Achieved interfacial chemical bond formation (Si-C-O-Al) and a bonding strength of 0.6 MPa facilitated by a ~25 nm amorphous transition layer.</li>
+        </ul>
+      </div>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Sub-Threshold Electron Beam Energy Induced Silicon Nanodots</h3>
+          <span class="item-date">Apr 2024 – Mar 2025</span>
+        </div>
+        <div class="item-sub">Nanomechatronics Lab, KUAS &bull; Supervisor: Prof. Dr. Takahiro Namazu</div>
+        <ul>
+          <li>Demonstrated solid-state phase transformation of amorphous SiO₂ into crystalline Si nanodots using sub-threshold electron beam energies (1–30 keV).</li>
+          <li>Established a parametric framework based on beam energy, irradiation dose, and substrate temperature for Si nanodot size and distribution control.</li>
+        </ul>
+      </div>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Strength Control of Silica Substrates Using EB-Induced Si Nanodots</h3>
+          <span class="item-date">Sep 2022 – Mar 2024</span>
+        </div>
+        <div class="item-sub">Nanomechatronics Lab, KUAS &bull; Supervisor: Prof. Dr. Takahiro Namazu</div>
+        <ul>
+          <li>Demonstrated strengthening (~2.5x increment) of amorphous silica nano- and micro-structures via electron beam irradiation (1.5–15 keV) evaluated by nanoscale tensile and microscale bending tests.</li>
+          <li>Developed active fracture control concepts supported by TEM observations and Raman spectroscopy.</li>
+        </ul>
+      </div>
+
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Durability &amp; Water Resistance of 3D Printed Products</h3>
+          <span class="item-date">Apr 2023 – Mar 2024</span>
+        </div>
+        <div class="item-sub">KUAS Capstone Project &bull; Supervisor: Assoc. Prof. Dr. Ryo Takahashi</div>
+        <ul>
+          <li>Replaced CNC-machined lathe jigs with 3D-printed composite components (CFRP), utilizing FEA and topology optimization to cut fabrication costs by 85% while maximizing strength-to-weight ratio.</li>
+          <li>Executed ASTM D695 quasi-static compression tests to evaluate anisotropic yield stress across infill densities and print orientations.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Publications -->
     <section id="publications">
-      <h2>Selected Publications &amp; Proceedings</h2>
+      <h2>Publications &amp; Conferences</h2>
 
-      <div class="publication-item">
-        <h3>Size Effects on Tensile Strength and Fracture Behavior of Carbon Nanotubes</h3>
-        <div class="authors">Abbhiraj Singh, Lucas Varano, Masao Torii, Adam C. Powell, Amit Banerjee, Takahiro Namazu</div>
-        <div class="venue">Sensors and Materials, Vol. 38, No. 1, pp. 127–136 (2026)</div>
-        <a href="https://doi.org/10.18494/SAM5980" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View Paper &rarr;</a>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Electron Beam Induced Nanoengineering in Amorphous Silica Nanomembranes</h3>
+          <span class="badge-pill">Peer-reviewed &bull; Oral</span>
+        </div>
+        <div class="item-sub">Micro and Nano Engineering Conference (MNE 2026)</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Abbhiraj Singh et al.</p>
       </div>
 
-      <div class="publication-item">
-        <h3>Structural modification of amorphous SiO2 films using EB irradiation</h3>
-        <div class="authors">Abbhiraj Singh, Muneyuki Naito, Takahiro Namazu</div>
-        <div class="venue">Proceedings of JSPE Semestrial Meeting, Vol. 2025A, pp. 464–465 (2025)</div>
-        <a href="https://doi.org/10.11522/pscjspe.2025A.0_464" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View Proceedings &rarr;</a>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Size Effects on Tensile Strength and Fracture Behavior of Carbon Nanotubes</h3>
+          <span class="badge-pill">Journal Paper</span>
+        </div>
+        <div class="item-sub">Sensors and Materials, Vol. 38, No. 1, pp. 127–136 (2026)</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.4rem;">Abbhiraj Singh et al.</p>
+        <a href="https://doi.org/10.18494/SAM5980" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none;">DOI: 10.18494/SAM5980 &rarr;</a>
       </div>
 
-      <div class="publication-item">
-        <h3>Hydrophilic thermocompression bonding of single-crystalline 3C-SiC thin film on sapphire substrate</h3>
-        <div class="authors">Abdul Ahad Khan, Tuan-Khoa Nguyen, Abbhiraj Singh, Takahiro Namazu, Dzung Viet Dao, Yong Zhu</div>
-        <div class="venue">Next Materials, Vol. 8, 100745 (2025)</div>
-        <a href="https://doi.org/10.1016/j.nxmate.2025.100745" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View Paper &rarr;</a>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Structural modification of amorphous SiO2 films using EB irradiation</h3>
+          <span class="badge-pill">Conference Proceedings &bull; Oral</span>
+        </div>
+        <div class="item-sub">Proceedings of JSPE Semestrial Meeting, Vol. 2025A, pp. 464–465 (2025)</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.4rem;">Abbhiraj Singh et al.</p>
+        <a href="https://doi.org/10.11522/pscjspe.2025A.0_464" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none;">DOI: 10.11522/pscjspe.2025A.0_464 &rarr;</a>
       </div>
 
-      <div class="publication-item">
-        <h3>Silicon-Nanodot-Induced Strength Control for Silicon MEMS</h3>
-        <div class="authors">Abbhiraj Singh, Shingo Kammachi, Takahiro Namazu</div>
-        <div class="venue">IEEE Transducers 2023, pp. 244–247 (Kyoto, Japan)</div>
-        <a href="https://ieeexplore.ieee.org/abstract/document/10516924" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View IEEE Xplore &rarr;</a>
+      <div class="item-card">
+        <div class="item-header">
+          <h3>Silicon-Nanodot-Induced Strength Control for Silicon MEMS</h3>
+          <span class="badge-pill">IEEE Transducers &bull; Oral</span>
+        </div>
+        <div class="item-sub">2023 22nd International Conference on Solid-State Sensors, Actuators and Microsystems (Transducers), pp. 244–247</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.4rem;">Abbhiraj Singh et al.</p>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10516924" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none;">IEEE Xplore &rarr;</a>
       </div>
     </section>
 
-    <!-- Honors & Awards -->
+    <!-- Awards & Honors -->
     <section id="awards">
-      <h2>Honors &amp; Awards</h2>
+      <h2>Awards &amp; Recognition</h2>
       <div class="award-item">
-        <strong>Winner (1st Place), Falling Walls Lab Sendai</strong>
-        <span class="card-meta">Falling Walls Foundation (2026)</span>
+        <div>
+          <strong>Winner 1st Place, Falling Walls Lab Sendai</strong>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Falling Walls Foundation</div>
+        </div>
+        <span class="item-date">August 2026</span>
       </div>
+
       <div class="award-item">
-        <strong>Young Outstanding Lecture Fellow Award</strong>
-        <span class="card-meta">JSME Micro-Nano Engineering Division (2025)</span>
+        <div>
+          <strong>Young Outstanding Lecture Fellow Award</strong>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">JSME Micro-Nano Engineering Division</div>
+        </div>
+        <span class="item-date">December 2025</span>
       </div>
+
       <div class="award-item">
-        <strong>ICPE 2024 Young Research Award</strong>
-        <span class="card-meta">Japan Society of Precision Engineering (2024)</span>
+        <div>
+          <strong>ICPE 2024 Young Research Award</strong>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Japan Society for Precision Engineering (JSPE)</div>
+        </div>
+        <span class="item-date">October 2024</span>
       </div>
+
       <div class="award-item">
-        <strong>Young Research Fellow Award</strong>
-        <span class="card-meta">Japan Society of Mechanical Engineers (2023)</span>
-      </div>
-      <div class="award-item">
-        <strong>Super KUAS-E Scholarship Recipient (Undergraduate &amp; Graduate)</strong>
-        <span class="card-meta">Kyoto University of Advanced Science</span>
+        <div>
+          <strong>Young Research Fellow Award</strong>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Japan Society of Mechanical Engineers (JSME)</div>
+        </div>
+        <span class="item-date">December 2023</span>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Connect & Test Scores -->
     <section id="contact" style="border-bottom: none;">
-      <h2>Connect</h2>
-      <p style="color: var(--text-muted); margin-bottom: 1rem;">
-        Open to discussions on MEMS devices, micro/nanoscale mechanics, academic collaborations, and cutting-edge semiconductor research.
+      <h2>Contact &amp; Details</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+        Open to discussions on semiconductor packaging, nanomechanical testing, MEMS devices, and industry collaborations.
       </p>
-      <p style="font-size: 0.95rem;">
-        <strong>Email:</strong> <a href="mailto:abbhiraj04@gmail.com" style="color: var(--accent); text-decoration: none;">abbhiraj04@gmail.com</a><br>
-        <strong>Location:</strong> Kyoto, Japan<br>
-        <strong>Languages:</strong> English, Japanese (JLPT N2)
-      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Communication</h3>
+          <p class="card-meta">Location &amp; Channels</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            <strong>Email:</strong> <a href="mailto:abbhiraj04@gmail.com" style="color: var(--accent); text-decoration: none;">abbhiraj04@gmail.com</a><br>
+            <strong>Phone:</strong> +81-8072893188<br>
+            <strong>Location:</strong> Kyoto, Japan<br>
+            <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abbhiraj-singh04" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">linkedin.com/in/abbhiraj-singh04</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Language Proficiencies</h3>
+          <p class="card-meta">Certified Standardized Tests</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            <strong>TOEFL iBT:</strong> 110/120 (CEFR C1) &bull; Apr 2026<br>
+            <strong>JLPT N2:</strong> 115/180 (CEFR B2) &bull; Jan 2026<br>
+            <strong>English:</strong> Fluent / Native Working<br>
+            <strong>Japanese:</strong> Professional Working
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Abbhiraj Singh. Hosted on GitHub Pages.
+    &copy; 2026 Abbhiraj Singh. Built with GitHub Pages.
   </footer>
 
 </body>
