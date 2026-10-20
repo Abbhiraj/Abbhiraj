@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abbhiraj Singh | Nanotechnology & MEMS Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --card-bg: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --accent: #0f4c81;
+      --accent-hover: #0a3357;
+      --border: #e5e7eb;
+      --tag-bg: #f3f4f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links a {
+      margin-left: 1.25rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      background-color: #e8f0fe;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
+      line-height: 1.2;
+      color: #111827;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      background-color: var(--card-bg);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-muted);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: #111827;
+    }
+
+    /* Cards & Lists */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .publication-item {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .publication-item h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .publication-item .authors {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .publication-item .venue {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .award-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .award-item:last-child {
+      border-bottom: none;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      background-color: var(--tag-bg);
+      color: var(--text-main);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2.1rem; }
+      .hero-cta { flex-direction: column; align-items: flex-start; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="brand">Abbhiraj Singh</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Honors</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <span class="hero-badge">Nanotechnology &amp; MEMS Engineering</span>
+      <h1>Bridging nanoscale mechanics and micro-device innovation.</h1>
+      <p>
+        Graduate researcher at Kyoto University of Advanced Science specializing in silicon nanodots, 
+        electron-beam irradiation, thin film deposition, and micro/nanoscale material characterization.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.linkedin.com/in/abbhiraj-singh-616832239/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn Profile</a>
+        <a href="mailto:abbhiraj04@gmail.com" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About &amp; Core Expertise</h2>
+      <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        My work centers on the structural and mechanical properties of advanced materials at the sub-micron scale, 
+        combining cleanroom nanofabrication with in-situ electron microscopy techniques and FEA modeling.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Fabrication &amp; Synthesis</h3>
+          <p class="card-meta">Cleanroom &amp; Lithography</p>
+          <div class="tags">
+            <span class="tag">EB Lithography</span>
+            <span class="tag">Photolithography</span>
+            <span class="tag">FIB Milling</span>
+            <span class="tag">Dry/Wet Etching</span>
+            <span class="tag">Reactive Bonding</span>
+            <span class="tag">Stöber Method</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Characterization &amp; Analysis</h3>
+          <p class="card-meta">In-situ &amp; Surface Metrology</p>
+          <div class="tags">
+            <span class="tag">SEM &amp; TEM</span>
+            <span class="tag">AFM</span>
+            <span class="tag">Auger Spectroscopy</span>
+            <span class="tag">XRD Analysis</span>
+            <span class="tag">Raman Spectroscopy</span>
+            <span class="tag">I-V Characterization</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Computation &amp; Design</h3>
+          <p class="card-meta">Simulation &amp; Coding</p>
+          <div class="tags">
+            <span class="tag">MEMS Design</span>
+            <span class="tag">FEA</span>
+            <span class="tag">Python</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">C / C++</span>
+            <span class="tag">Simulink</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section id="research">
+      <h2>Research &amp; Industry Experience</h2>
+      <div class="publication-item">
+        <h3>Student Researcher &bull; Nanomechatronics Laboratory</h3>
+        <p class="venue">Kyoto University of Advanced Science | Sep 2022 – Present</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.4rem;">
+          Designed and developed MEMS tensile testing chips for in-situ SEM observation, nanoscale tensile testing, 
+          and I-V characterization. Achieved strength control of silica nano- and micro-structures utilizing silicon nanodots.
+        </p>
+      </div>
+
+      <div class="publication-item">
+        <h3>Research Collaborator &bull; ROHM Co., Ltd.</h3>
+        <p class="venue">Kyoto, Japan | Oct 2022 – Mar 2023</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.4rem;">
+          Conducted mechanical property characterization of PZT cantilevers. Designed and implemented a micro-scale 
+          tensile testing setup for PZT material evaluation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Selected Publications &amp; Proceedings</h2>
+
+      <div class="publication-item">
+        <h3>Size Effects on Tensile Strength and Fracture Behavior of Carbon Nanotubes</h3>
+        <div class="authors">Abbhiraj Singh, Lucas Varano, Masao Torii, Adam C. Powell, Amit Banerjee, Takahiro Namazu</div>
+        <div class="venue">Sensors and Materials, Vol. 38, No. 1, pp. 127–136 (2026)</div>
+        <a href="https://doi.org/10.18494/SAM5980" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View Paper &rarr;</a>
+      </div>
+
+      <div class="publication-item">
+        <h3>Structural modification of amorphous SiO2 films using EB irradiation</h3>
+        <div class="authors">Abbhiraj Singh, Muneyuki Naito, Takahiro Namazu</div>
+        <div class="venue">Proceedings of JSPE Semestrial Meeting, Vol. 2025A, pp. 464–465 (2025)</div>
+        <a href="https://doi.org/10.11522/pscjspe.2025A.0_464" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View Proceedings &rarr;</a>
+      </div>
+
+      <div class="publication-item">
+        <h3>Hydrophilic thermocompression bonding of single-crystalline 3C-SiC thin film on sapphire substrate</h3>
+        <div class="authors">Abdul Ahad Khan, Tuan-Khoa Nguyen, Abbhiraj Singh, Takahiro Namazu, Dzung Viet Dao, Yong Zhu</div>
+        <div class="venue">Next Materials, Vol. 8, 100745 (2025)</div>
+        <a href="https://doi.org/10.1016/j.nxmate.2025.100745" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View Paper &rarr;</a>
+      </div>
+
+      <div class="publication-item">
+        <h3>Silicon-Nanodot-Induced Strength Control for Silicon MEMS</h3>
+        <div class="authors">Abbhiraj Singh, Shingo Kammachi, Takahiro Namazu</div>
+        <div class="venue">IEEE Transducers 2023, pp. 244–247 (Kyoto, Japan)</div>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10516924" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 0.3rem; display: inline-block;">View IEEE Xplore &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Honors & Awards -->
+    <section id="awards">
+      <h2>Honors &amp; Awards</h2>
+      <div class="award-item">
+        <strong>Winner (1st Place), Falling Walls Lab Sendai</strong>
+        <span class="card-meta">Falling Walls Foundation (2026)</span>
+      </div>
+      <div class="award-item">
+        <strong>Young Outstanding Lecture Fellow Award</strong>
+        <span class="card-meta">JSME Micro-Nano Engineering Division (2025)</span>
+      </div>
+      <div class="award-item">
+        <strong>ICPE 2024 Young Research Award</strong>
+        <span class="card-meta">Japan Society of Precision Engineering (2024)</span>
+      </div>
+      <div class="award-item">
+        <strong>Young Research Fellow Award</strong>
+        <span class="card-meta">Japan Society of Mechanical Engineers (2023)</span>
+      </div>
+      <div class="award-item">
+        <strong>Super KUAS-E Scholarship Recipient (Undergraduate &amp; Graduate)</strong>
+        <span class="card-meta">Kyoto University of Advanced Science</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="border-bottom: none;">
+      <h2>Connect</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">
+        Open to discussions on MEMS devices, micro/nanoscale mechanics, academic collaborations, and cutting-edge semiconductor research.
+      </p>
+      <p style="font-size: 0.95rem;">
+        <strong>Email:</strong> <a href="mailto:abbhiraj04@gmail.com" style="color: var(--accent); text-decoration: none;">abbhiraj04@gmail.com</a><br>
+        <strong>Location:</strong> Kyoto, Japan<br>
+        <strong>Languages:</strong> English, Japanese (JLPT N2)
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Abbhiraj Singh. Hosted on GitHub Pages.
+  </footer>
+
+</body>
+</html>
